@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: wow-raiderio-mcp
+  main:
+    web-application-type: none
+    banner-mode: off
+  ai:
+    mcp:
+      server:
+        name: wow-raiderio-mcp
+        version: 1.0.0
+        type: SYNC
+
+raiderio:
+  base-url: https://raider.io/api/v1
+  default-region: eu
+  timeout-seconds: 10
+
+logging:
+  level:
+    root: ERROR
+    dev.benjamin.wow: INFO
