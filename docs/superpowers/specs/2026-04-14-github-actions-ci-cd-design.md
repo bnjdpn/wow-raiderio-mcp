@@ -47,10 +47,14 @@ No `paths-ignore` — README/docs PRs run a full build too. Keeps the status che
 
 **Job: `build`**
 - Runner: `ubuntu-latest`
+- `timeout-minutes: 20` — caps runaway jobs at 20 min (default GHA timeout is 6 h, way too long for a ~3 min build)
+- `permissions: contents: read` — explicit-deny default per GitHub hardening guide
 - Steps:
   1. `actions/checkout@v4`
   2. `actions/setup-java@v4` with `distribution: temurin`, `java-version: '25'`, `cache: maven`
   3. `mvn -B verify`
+
+**Workflow-level concurrency**: `group: ci-${{ github.ref }}`, `cancel-in-progress: true`. When a PR gets multiple rapid pushes (rebase, fixup), older runs are cancelled rather than running to completion in parallel. Safe for CI; never use `cancel-in-progress: true` on a release/deploy workflow.
 
 The built-in `cache: maven` of `setup-java@v4` handles `~/.m2/repository`. No separate `actions/cache` step.
 
@@ -65,6 +69,7 @@ The built-in `cache: maven` of `setup-java@v4` handles `~/.m2/repository`. No se
 
 **Job: `release`**
 - Runner: `ubuntu-latest`
+- `timeout-minutes: 20`
 - Permissions: `contents: write` (needed to create the release)
 - Steps:
   1. `actions/checkout@v4`
@@ -75,6 +80,8 @@ The built-in `cache: maven` of `setup-java@v4` handles `~/.m2/repository`. No se
      - `generate_release_notes: true` (uses GitHub's native commit-list generator, zero maintenance)
      - `draft: false`, `prerelease: false`
      - Uses the implicit `${{ github.token }}` for auth
+
+**Workflow-level concurrency**: `group: release-${{ github.ref }}`, `cancel-in-progress: false`. Tag-keyed serialization — no two concurrent runs for the same tag — but **never cancel** a release in flight (would leave a partial release on GitHub).
 
 **Versioning model**: the developer manually bumps `pom.xml` `<version>`, commits, tags `vX.Y.Z`, pushes the tag. The workflow does not rewrite `pom.xml`. This is safe here because `<finalName>wow-raiderio-mcp</finalName>` produces a versionless jar name, so pom-version drift never affects the artifact name attached to the release.
 
@@ -89,6 +96,7 @@ Standard GitHub-recommended template for Java, adapted to the project's JDK.
 
 **Job: `analyze`**
 - Runner: `ubuntu-latest`
+- `timeout-minutes: 30` (CodeQL extraction + analysis is slower than a plain build)
 - Permissions: `security-events: write`, `actions: read`, `contents: read`
 - Steps:
   1. `actions/checkout@v4`
@@ -96,6 +104,8 @@ Standard GitHub-recommended template for Java, adapted to the project's JDK.
   3. `github/codeql-action/init@v3` with `languages: java-kotlin`
   4. `mvn -B -DskipTests package` — explicit build step so CodeQL can observe compilation. Skipping tests here is correct: CodeQL only needs the bytecode, and tests already run in `ci.yml`.
   5. `github/codeql-action/analyze@v3`
+
+**Workflow-level concurrency**: `group: codeql-${{ github.ref }}`, `cancel-in-progress: true`. A scan is interruptible (next scan covers everything), so cancelling on rapid pushes saves runner time.
 
 ### `dependabot.yml`
 
