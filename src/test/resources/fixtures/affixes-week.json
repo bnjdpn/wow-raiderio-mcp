@@ -1,0 +1,10 @@
+{
+  "region": "eu",
+  "title": "Fortified, Bolstering, Raging",
+  "leaderboard_url": "https://raider.io/mythic-plus-weekly-affix-rankings/fortified-bolstering-raging/eu",
+  "affix_details": [
+    { "id": 10, "name": "Fortified", "description": "Non-boss enemies have 20% more health and inflict up to 30% increased damage.", "icon": "ability_toughness", "wowhead_url": "https://wowhead.com/affix=10" },
+    { "id": 7,  "name": "Bolstering", "description": "When any non-boss enemy dies, its death cry empowers nearby allies.", "icon": "ability_warrior_battleshout", "wowhead_url": "https://wowhead.com/affix=7" },
+    { "id": 6,  "name": "Raging", "description": "Non-boss enemies enrage at 30% health remaining, dealing 100% increased damage.", "icon": "ability_warrior_focusedrage", "wowhead_url": "https://wowhead.com/affix=6" }
+  ]
+}

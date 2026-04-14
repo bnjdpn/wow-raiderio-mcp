@@ -1,0 +1,21 @@
+{
+  "rankings": [
+    {
+      "rank": 1,
+      "run": {
+        "dungeon": { "id": 505, "name": "Ara-Kara, City of Echoes", "short_name": "ARAK", "slug": "ara-kara-city-of-echoes" },
+        "mythic_level": 20,
+        "score": 510.5,
+        "clear_time_ms": 1650000,
+        "completed_at": "2026-04-13T20:00:00.000Z",
+        "roster": [
+          { "character": { "name": "Topwar", "class": "Warrior", "spec": "Fury", "race": "Orc" } },
+          { "character": { "name": "Tophealer", "class": "Priest", "spec": "Holy", "race": "Dwarf" } },
+          { "character": { "name": "Toptank", "class": "Druid", "spec": "Guardian", "race": "Troll" } },
+          { "character": { "name": "Topmage", "class": "Mage", "spec": "Frost", "race": "Gnome" } },
+          { "character": { "name": "Topdk", "class": "Death Knight", "spec": "Unholy", "race": "Orc" } }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "name": "Stormrage",
+  "race": "Orc",
+  "class": "Warrior",
+  "active_spec_name": "Fury",
+  "active_spec_role": "DPS",
+  "gender": "male",
+  "faction": "horde",
+  "achievement_points": 28450,
+  "thumbnail_url": "https://render.worldofwarcraft.com/eu/character/hyjal/123/456-avatar.jpg",
+  "region": "eu",
+  "realm": "Hyjal",
+  "last_crawled_at": "2026-04-14T08:00:00.000Z",
+  "profile_url": "https://raider.io/characters/eu/hyjal/Stormrage",
+  "profile_banner": "hordebanner1",
+  "mythic_plus_scores_by_season": [
+    {
+      "season": "season-tww-3",
+      "scores": {
+        "all": 2850.5,
+        "dps": 2850.5,
+        "healer": 0.0,
+        "tank": 0.0,
+        "spec_0": 2850.5,
+        "spec_1": 0.0,
+        "spec_2": 0.0,
+        "spec_3": 0.0
+      },
+      "segments": {
+        "all": { "score": 2850.5, "color": "#ff8000" },
+        "dps": { "score": 2850.5, "color": "#ff8000" }
+      }
+    }
+  ],
+  "mythic_plus_best_runs": [
+    { "dungeon": "Ara-Kara, City of Echoes", "short_name": "ARAK", "mythic_level": 15, "num_keystone_upgrades": 1, "score": 210.5, "clear_time_ms": 1780000, "par_time_ms": 1800000, "completed_at": "2026-04-12T20:15:00.000Z", "affixes": [{"name":"Fortified"}], "url": "x" },
+    { "dungeon": "The Dawnbreaker", "short_name": "DAWN", "mythic_level": 14, "num_keystone_upgrades": 1, "score": 195.0, "clear_time_ms": 1700000, "par_time_ms": 1800000, "completed_at": "2026-04-11T19:00:00.000Z", "affixes": [{"name":"Tyrannical"}], "url": "x" },
+    { "dungeon": "City of Threads", "short_name": "COT", "mythic_level": 13, "num_keystone_upgrades": 2, "score": 185.0, "clear_time_ms": 1500000, "par_time_ms": 1800000, "completed_at": "2026-04-10T18:30:00.000Z", "affixes": [{"name":"Fortified"}], "url": "x" },
+    { "dungeon": "The Stonevault", "short_name": "SV", "mythic_level": 12, "num_keystone_upgrades": 0, "score": 150.0, "clear_time_ms": 1900000, "par_time_ms": 1800000, "completed_at": "2026-04-09T21:00:00.000Z", "affixes": [{"name":"Tyrannical"}], "url": "x" },
+    { "dungeon": "Mists of Tirna Scithe", "short_name": "MISTS", "mythic_level": 14, "num_keystone_upgrades": 1, "score": 200.0, "clear_time_ms": 1700000, "par_time_ms": 1800000, "completed_at": "2026-04-08T20:00:00.000Z", "affixes": [{"name":"Fortified"}], "url": "x" },
+    { "dungeon": "The Necrotic Wake", "short_name": "NW", "mythic_level": 13, "num_keystone_upgrades": 1, "score": 180.0, "clear_time_ms": 1750000, "par_time_ms": 1800000, "completed_at": "2026-04-07T19:30:00.000Z", "affixes": [{"name":"Tyrannical"}], "url": "x" },
+    { "dungeon": "Siege of Boralus", "short_name": "SOB", "mythic_level": 12, "num_keystone_upgrades": 1, "score": 165.0, "clear_time_ms": 1780000, "par_time_ms": 1800000, "completed_at": "2026-04-06T18:00:00.000Z", "affixes": [{"name":"Fortified"}], "url": "x" },
+    { "dungeon": "Grim Batol", "short_name": "GB", "mythic_level": 11, "num_keystone_upgrades": 1, "score": 140.0, "clear_time_ms": 1795000, "par_time_ms": 1800000, "completed_at": "2026-04-05T17:00:00.000Z", "affixes": [{"name":"Tyrannical"}], "url": "x" }
+  ],
+  "mythic_plus_recent_runs": [
+    { "dungeon": "Ara-Kara, City of Echoes", "short_name": "ARAK", "mythic_level": 15, "num_keystone_upgrades": 1, "score": 210.5, "clear_time_ms": 1780000, "par_time_ms": 1800000, "completed_at": "2026-04-12T20:15:00.000Z", "affixes": [{"name":"Fortified"}], "url": "x" },
+    { "dungeon": "The Dawnbreaker", "short_name": "DAWN", "mythic_level": 14, "num_keystone_upgrades": 1, "score": 195.0, "clear_time_ms": 1700000, "par_time_ms": 1800000, "completed_at": "2026-04-11T19:00:00.000Z", "affixes": [{"name":"Tyrannical"}], "url": "x" },
+    { "dungeon": "The Stonevault", "short_name": "SV", "mythic_level": 12, "num_keystone_upgrades": 0, "score": 150.0, "clear_time_ms": 1900000, "par_time_ms": 1800000, "completed_at": "2026-04-10T21:00:00.000Z", "affixes": [{"name":"Tyrannical"}], "url": "x" },
+    { "dungeon": "City of Threads", "short_name": "COT", "mythic_level": 13, "num_keystone_upgrades": 2, "score": 185.0, "clear_time_ms": 1500000, "par_time_ms": 1800000, "completed_at": "2026-04-10T18:30:00.000Z", "affixes": [{"name":"Fortified"}], "url": "x" },
+    { "dungeon": "Mists of Tirna Scithe", "short_name": "MISTS", "mythic_level": 14, "num_keystone_upgrades": 1, "score": 200.0, "clear_time_ms": 1700000, "par_time_ms": 1800000, "completed_at": "2026-04-08T20:00:00.000Z", "affixes": [{"name":"Fortified"}], "url": "x" },
+    { "dungeon": "The Necrotic Wake", "short_name": "NW", "mythic_level": 13, "num_keystone_upgrades": 1, "score": 180.0, "clear_time_ms": 1750000, "par_time_ms": 1800000, "completed_at": "2026-04-07T19:30:00.000Z", "affixes": [{"name":"Tyrannical"}], "url": "x" },
+    { "dungeon": "Siege of Boralus", "short_name": "SOB", "mythic_level": 12, "num_keystone_upgrades": 0, "score": 100.0, "clear_time_ms": 1900000, "par_time_ms": 1800000, "completed_at": "2026-04-06T18:00:00.000Z", "affixes": [{"name":"Fortified"}], "url": "x" },
+    { "dungeon": "Grim Batol", "short_name": "GB", "mythic_level": 11, "num_keystone_upgrades": 1, "score": 140.0, "clear_time_ms": 1795000, "par_time_ms": 1800000, "completed_at": "2026-04-05T17:00:00.000Z", "affixes": [{"name":"Tyrannical"}], "url": "x" }
+  ],
+  "gear": {
+    "item_level_equipped": 636.8,
+    "item_level_total": 636.8,
+    "items": {
+      "head":     { "item_id": 212436, "item_level": 639, "name": "Headpiece of Fury", "enchant": 7460, "gems": [213743], "tier": "T33" },
+      "neck":     { "item_id": 225578, "item_level": 639, "name": "Amulet of Earthen Craftsmanship", "enchant": 0, "gems": [] },
+      "shoulder": { "item_id": 212435, "item_level": 639, "name": "Shoulders of Fury", "enchant": 0, "gems": [] },
+      "back":     { "item_id": 222817, "item_level": 635, "name": "Cloak of Rage", "enchant": 0, "gems": [] },
+      "chest":    { "item_id": 212434, "item_level": 639, "name": "Chestguard of Fury", "enchant": 7364, "gems": [] },
+      "wrist":    { "item_id": 222445, "item_level": 632, "name": "Bracers of the Forge", "enchant": 0, "gems": [] },
+      "hands":    { "item_id": 212432, "item_level": 639, "name": "Gauntlets of Fury", "enchant": 0, "gems": [] },
+      "waist":    { "item_id": 222823, "item_level": 636, "name": "Belt of Earthen Might", "enchant": 0, "gems": [] },
+      "legs":     { "item_id": 212433, "item_level": 639, "name": "Legguards of Fury", "enchant": 0, "gems": [] },
+      "feet":     { "item_id": 222820, "item_level": 632, "name": "Boots of Stormstride", "enchant": 0, "gems": [] },
+      "finger1":  { "item_id": 215135, "item_level": 639, "name": "Ring of the Forge", "enchant": 7340, "gems": [213743] },
+      "finger2":  { "item_id": 215136, "item_level": 636, "name": "Seal of Earthen", "enchant": 0, "gems": [] },
+      "trinket1": { "item_id": 219301, "item_level": 639, "name": "Skardyn's Grace", "enchant": 0, "gems": [] },
+      "trinket2": { "item_id": 219302, "item_level": 636, "name": "Ovinax's Mercurial Egg", "enchant": 0, "gems": [] },
+      "mainhand": { "item_id": 212428, "item_level": 639, "name": "Greatsword of Fury", "enchant": 7446, "gems": [] },
+      "offhand":  { "item_id": 212429, "item_level": 639, "name": "Axe of the Forge", "enchant": 0, "gems": [] }
+    }
+  },
+  "talents": {
+    "loadout_text": "CAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAgMzMMzMYMwYDGmZGmxYYMzMzYGmxMmxyYMjZGmZmZ",
+    "loadout_spec_id": 72,
+    "class_id": 1
+  },
+  "raid_progression": {
+    "nerub-ar-palace": {
+      "summary": "8/8 H",
+      "total_bosses": 8,
+      "normal_bosses_killed": 8,
+      "heroic_bosses_killed": 8,
+      "mythic_bosses_killed": 0
+    }
+  }
+}
