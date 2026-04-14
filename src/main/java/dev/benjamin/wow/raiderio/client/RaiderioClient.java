@@ -55,8 +55,6 @@ public class RaiderioClient {
         } catch (WebClientResponseException e) {
             String body = e.getResponseBodyAsString();
             throw new RaiderioException("Raider.io " + e.getStatusCode() + ": " + body, e);
-        } catch (RaiderioException e) {
-            throw e;
         } catch (Exception e) {
             throw new RaiderioException("Raider.io call failed: " + e.getMessage(), e);
         }
