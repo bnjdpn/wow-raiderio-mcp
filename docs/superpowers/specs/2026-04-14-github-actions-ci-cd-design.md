@@ -65,7 +65,7 @@ The built-in `cache: maven` of `setup-java@v4` handles `~/.m2/repository`. No se
 ### `release.yml`
 
 **Trigger**
-- `push` of a tag matching `v*` (e.g. `v1.1.0`, `v2.0.0-beta1`)
+- `push` of a tag matching `v[0-9]+.[0-9]+.[0-9]+` (strict SemVer: `v1.0.0`, `v1.1.0`, `v2.0.0`). Stricter than a loose `v*` glob, which would also match accidental tags like `vendor-x` or `vNEXT`. Pre-release tags (`v1.0.0-rc1`) are intentionally not accepted — extend the glob and add `prerelease: ${{ contains(github.ref_name, '-') }}` if/when needed.
 
 **Job: `release`**
 - Runner: `ubuntu-latest`
@@ -77,6 +77,7 @@ The built-in `cache: maven` of `setup-java@v4` handles `~/.m2/repository`. No se
   3. `mvn -B verify` — runs the full test suite before publishing. Adds ~1 min to the release flow but prevents publishing a broken jar.
   4. `softprops/action-gh-release@v2` with:
      - `files: target/wow-raiderio-mcp.jar`
+     - `fail_on_unmatched_files: true` — if the jar is missing (e.g. someone changes `<finalName>` in `pom.xml`), fail loudly instead of silently publishing an empty release
      - `generate_release_notes: true` (uses GitHub's native commit-list generator, zero maintenance)
      - `draft: false`, `prerelease: false`
      - Uses the implicit `${{ github.token }}` for auth

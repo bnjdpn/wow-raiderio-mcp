@@ -149,7 +149,7 @@ name: Release
 on:
   push:
     tags:
-      - 'v*'
+      - 'v[0-9]+.[0-9]+.[0-9]+'
 
 permissions:
   contents: write
@@ -182,6 +182,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: target/wow-raiderio-mcp.jar
+          fail_on_unmatched_files: true
           generate_release_notes: true
           draft: false
           prerelease: false
