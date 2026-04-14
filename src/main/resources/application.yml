@@ -15,6 +15,9 @@ raiderio:
   base-url: https://raider.io/api/v1
   default-region: eu
   timeout-seconds: 10
+  # Raider.io season slug used by wow_compare_to_meta.
+  # Midnight Season 1 launched 2026-03-24. Override if Raider.io renames it.
+  current-season: season-mn-1
 
 logging:
   level:
