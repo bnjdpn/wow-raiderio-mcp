@@ -9,7 +9,7 @@
     </parent>
     <groupId>dev.benjamin.wow</groupId>
     <artifactId>wow-raiderio-mcp</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>wow-raiderio-mcp</name>
     <properties>
         <java.version>25</java.version>

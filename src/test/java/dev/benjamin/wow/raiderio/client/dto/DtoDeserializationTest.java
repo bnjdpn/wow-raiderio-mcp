@@ -48,5 +48,12 @@ class DtoDeserializationTest {
         assertThat(r.rankings()).hasSize(1);
         assertThat(r.rankings().get(0).run().dungeon().shortName()).isEqualTo("ARAK");
         assertThat(r.rankings().get(0).run().roster()).hasSize(5);
+
+        var firstChar = r.rankings().get(0).run().roster().get(0).character();
+        assertThat(firstChar.name()).isEqualTo("Topwar");
+        assertThat(firstChar.characterClass().name()).isEqualTo("Warrior");
+        assertThat(firstChar.spec().name()).isEqualTo("Fury");
+        assertThat(firstChar.race().name()).isEqualTo("Orc");
+        assertThat(firstChar.race().faction()).isEqualTo("horde");
     }
 }

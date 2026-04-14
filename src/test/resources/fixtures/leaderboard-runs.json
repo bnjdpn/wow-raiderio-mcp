@@ -2,18 +2,110 @@
   "rankings": [
     {
       "rank": 1,
+      "score": 510.5,
       "run": {
-        "dungeon": { "id": 505, "name": "Ara-Kara, City of Echoes", "short_name": "ARAK", "slug": "ara-kara-city-of-echoes" },
+        "keystone_team_id": 387284257,
+        "season": "season-tww-3",
+        "status": "finished",
+        "dungeon": {
+          "type": "dungeon",
+          "id": 14961,
+          "name": "Ara-Kara, City of Echoes",
+          "short_name": "ARAK",
+          "slug": "ara-kara-city-of-echoes",
+          "expansion_id": 10,
+          "icon_url": "/images/wow/icons/large/inv_achievement_dungeon_arakara.jpg",
+          "patch": "11.0.0",
+          "wowInstanceId": 2660,
+          "map_challenge_mode_id": 503,
+          "keystone_timer_ms": 1860000,
+          "num_bosses": 3,
+          "group_finder_activity_ids": [1285, 1291]
+        },
+        "keystone_run_id": 41862059,
         "mythic_level": 20,
-        "score": 510.5,
         "clear_time_ms": 1650000,
+        "keystone_time_ms": 1860000,
         "completed_at": "2026-04-13T20:00:00.000Z",
+        "num_chests": 1,
+        "time_remaining_ms": 210000,
+        "logged_run_id": null,
+        "videos": [],
+        "weekly_modifiers": [],
+        "num_modifiers_active": 3,
+        "faction": "mixed",
+        "deleted_at": null,
+        "keystone_platoon_id": null,
+        "platoon": null,
         "roster": [
-          { "character": { "name": "Topwar", "class": "Warrior", "spec": "Fury", "race": "Orc" } },
-          { "character": { "name": "Tophealer", "class": "Priest", "spec": "Holy", "race": "Dwarf" } },
-          { "character": { "name": "Toptank", "class": "Druid", "spec": "Guardian", "race": "Troll" } },
-          { "character": { "name": "Topmage", "class": "Mage", "spec": "Frost", "race": "Gnome" } },
-          { "character": { "name": "Topdk", "class": "Death Knight", "spec": "Unholy", "race": "Orc" } }
+          {
+            "character": {
+              "id": 1,
+              "name": "Topwar",
+              "class": {"id": 1, "name": "Warrior", "slug": "warrior"},
+              "race": {"id": 2, "name": "Orc", "slug": "orc", "faction": "horde"},
+              "spec": {"id": 71, "name": "Fury", "slug": "fury"},
+              "faction": "horde",
+              "level": 90,
+              "role": "dps"
+            },
+            "oldCharacter": null,
+            "isTransfer": false,
+            "isBanned": false,
+            "role": "dps"
+          },
+          {
+            "character": {
+              "id": 2,
+              "name": "Tophealer",
+              "class": {"id": 5, "name": "Priest", "slug": "priest"},
+              "race": {"id": 3, "name": "Dwarf", "slug": "dwarf", "faction": "alliance"},
+              "spec": {"id": 257, "name": "Holy", "slug": "holy"},
+              "faction": "alliance",
+              "level": 90,
+              "role": "healer"
+            },
+            "role": "healer"
+          },
+          {
+            "character": {
+              "id": 3,
+              "name": "Toptank",
+              "class": {"id": 11, "name": "Druid", "slug": "druid"},
+              "race": {"id": 8, "name": "Troll", "slug": "troll", "faction": "horde"},
+              "spec": {"id": 104, "name": "Guardian", "slug": "guardian"},
+              "faction": "horde",
+              "level": 90,
+              "role": "tank"
+            },
+            "role": "tank"
+          },
+          {
+            "character": {
+              "id": 4,
+              "name": "Topmage",
+              "class": {"id": 8, "name": "Mage", "slug": "mage"},
+              "race": {"id": 7, "name": "Gnome", "slug": "gnome", "faction": "alliance"},
+              "spec": {"id": 64, "name": "Frost", "slug": "frost"},
+              "faction": "alliance",
+              "level": 90,
+              "role": "dps"
+            },
+            "role": "dps"
+          },
+          {
+            "character": {
+              "id": 5,
+              "name": "Topdk",
+              "class": {"id": 6, "name": "Death Knight", "slug": "death-knight"},
+              "race": {"id": 2, "name": "Orc", "slug": "orc", "faction": "horde"},
+              "spec": {"id": 252, "name": "Unholy", "slug": "unholy"},
+              "faction": "horde",
+              "level": 90,
+              "role": "dps"
+            },
+            "role": "dps"
+          }
         ]
       }
     }

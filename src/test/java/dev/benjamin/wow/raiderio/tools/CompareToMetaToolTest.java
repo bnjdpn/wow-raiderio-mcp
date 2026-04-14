@@ -11,6 +11,7 @@ import tools.jackson.databind.json.JsonMapper;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.Locale;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
@@ -60,7 +61,11 @@ class CompareToMetaToolTest {
 
     private static MythicPlusLeaderboardResponse.RosterMember member(String playerName, String cls, String spec) {
         return new MythicPlusLeaderboardResponse.RosterMember(
-            new MythicPlusLeaderboardResponse.Character(playerName, cls, spec, "Orc"));
+            new MythicPlusLeaderboardResponse.Character(
+                playerName,
+                new MythicPlusLeaderboardResponse.ClassInfo(0, cls, cls.toLowerCase(Locale.ROOT).replace(' ', '-')),
+                new MythicPlusLeaderboardResponse.SpecInfo(0, spec, spec.toLowerCase(Locale.ROOT).replace(' ', '-')),
+                new MythicPlusLeaderboardResponse.RaceInfo(0, "Orc", "orc", "horde")));
     }
 
     @Test

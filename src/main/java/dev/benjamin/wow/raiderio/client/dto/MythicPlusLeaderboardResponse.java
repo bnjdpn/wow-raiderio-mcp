@@ -25,8 +25,12 @@ public record MythicPlusLeaderboardResponse(List<Ranking> rankings) {
 
     public record Character(
         String name,
-        @JsonProperty("class") String characterClass,
-        String spec,
-        String race
+        @JsonProperty("class") ClassInfo characterClass,
+        SpecInfo spec,
+        RaceInfo race
     ) {}
+
+    public record ClassInfo(Integer id, String name, String slug) {}
+    public record SpecInfo(Integer id, String name, String slug) {}
+    public record RaceInfo(Integer id, String name, String slug, String faction) {}
 }

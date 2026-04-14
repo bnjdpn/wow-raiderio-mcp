@@ -49,8 +49,10 @@ public class CompareToMetaTool {
         long specAppearances = rankings.stream()
             .flatMap(r -> Optional.ofNullable(r.run().roster()).orElse(List.<MythicPlusLeaderboardResponse.RosterMember>of()).stream())
             .filter(m -> m.character() != null
-                && p.characterClass().equalsIgnoreCase(m.character().characterClass())
-                && p.activeSpecName().equalsIgnoreCase(m.character().spec()))
+                && m.character().characterClass() != null
+                && m.character().spec() != null
+                && p.characterClass().equalsIgnoreCase(m.character().characterClass().name())
+                && p.activeSpecName().equalsIgnoreCase(m.character().spec().name()))
             .count();
 
         f.section("Meta presence");
