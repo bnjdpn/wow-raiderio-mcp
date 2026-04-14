@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.1</version>
+        <version>4.0.5</version>
         <relativePath/>
     </parent>
     <groupId>dev.benjamin.wow</groupId>
@@ -13,7 +13,7 @@
     <name>wow-raiderio-mcp</name>
     <properties>
         <java.version>25</java.version>
-        <spring-ai.version>1.0.3</spring-ai.version>
+        <spring-ai.version>2.0.0-M3</spring-ai.version>
         <wiremock.version>3.9.2</wiremock.version>
     </properties>
     <dependencyManagement>
@@ -56,6 +56,25 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-milestones</id>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
     <build>
         <finalName>wow-raiderio-mcp</finalName>
         <plugins>

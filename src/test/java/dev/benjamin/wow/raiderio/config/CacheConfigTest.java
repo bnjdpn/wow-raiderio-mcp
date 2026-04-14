@@ -8,13 +8,8 @@ import org.junit.jupiter.api.extension.RegisterExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.cache.CacheManager;
-import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
-import org.springframework.web.reactive.function.client.WebClient;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -23,30 +18,8 @@ import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMockConfig;
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringBootTest(classes = CacheConfigTest.TestApp.class,
-    properties = { "spring.main.web-application-type=none" })
+@SpringBootTest(properties = { "spring.main.web-application-type=none" })
 class CacheConfigTest {
-
-    @Configuration
-    @EnableCaching
-    @Import(CacheConfig.class)
-    static class TestApp {
-        @Bean
-        RaiderioProperties raiderioProperties(
-                @org.springframework.beans.factory.annotation.Value("${raiderio.base-url}") String baseUrl) {
-            return new RaiderioProperties(baseUrl, "eu", 10);
-        }
-
-        @Bean
-        WebClient raiderioWebClient(RaiderioProperties props) {
-            return WebClient.builder().baseUrl(props.baseUrl()).build();
-        }
-
-        @Bean
-        RaiderioClient raiderioClient(WebClient raiderioWebClient, RaiderioProperties props) {
-            return new RaiderioClient(raiderioWebClient, props);
-        }
-    }
 
     @RegisterExtension
     static WireMockExtension wm = WireMockExtension.newInstance()
