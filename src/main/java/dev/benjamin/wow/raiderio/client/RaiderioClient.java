@@ -4,6 +4,7 @@ import dev.benjamin.wow.raiderio.client.dto.AffixesResponse;
 import dev.benjamin.wow.raiderio.client.dto.CharacterProfile;
 import dev.benjamin.wow.raiderio.client.dto.MythicPlusLeaderboardResponse;
 import dev.benjamin.wow.raiderio.config.RaiderioProperties;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.WebClientResponseException;
@@ -23,6 +24,7 @@ public class RaiderioClient {
         this.timeout = Duration.ofSeconds(props.timeoutSeconds());
     }
 
+    @Cacheable(cacheNames = "characterProfile", key = "#region + ':' + #realm + ':' + #name + ':' + #fields")
     public CharacterProfile fetchCharacterProfile(String region, String realm, String name, String fields) {
         return get("/characters/profile", CharacterProfile.class, uri -> uri
             .queryParam("region", region)
@@ -31,12 +33,14 @@ public class RaiderioClient {
             .queryParam("fields", fields));
     }
 
+    @Cacheable(cacheNames = "affixes", key = "#region + ':' + #locale")
     public AffixesResponse fetchAffixes(String region, String locale) {
         return get("/mythic-plus/affixes", AffixesResponse.class, uri -> uri
             .queryParam("region", region)
             .queryParam("locale", locale));
     }
 
+    @Cacheable(cacheNames = "leaderboard", key = "#region + ':' + #season + ':' + #dungeon + ':' + #page")
     public MythicPlusLeaderboardResponse fetchLeaderboardRuns(String region, String season, String dungeon, int page) {
         return get("/mythic-plus/runs", MythicPlusLeaderboardResponse.class, uri -> uri
             .queryParam("region", region)
