@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>4.0.5</version>
+        <version>4.0.6</version>
         <relativePath/>
     </parent>
     <groupId>dev.benjamin.wow</groupId>
@@ -14,7 +14,7 @@
     <properties>
         <java.version>25</java.version>
         <spring-ai.version>2.0.0-M3</spring-ai.version>
-        <wiremock.version>3.9.2</wiremock.version>
+        <wiremock.version>3.13.2</wiremock.version>
     </properties>
     <dependencyManagement>
         <dependencies>
